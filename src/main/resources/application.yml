@@ -1,0 +1,29 @@
+logging:
+  level:
+    root: INFO
+    com.lookiero: DEBUG
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  h2:
+    console.enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+  sql:
+    init:
+      mode: always
+validation:
+  height:
+    less: 2.3
+    over: 1.0
+  weight:
+    less: 150.0
+    over: 40.0
+  name:
+    regex: ^[\^s\S]{8,25}$
